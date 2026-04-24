@@ -180,82 +180,85 @@ function App() {
             animate="visible"
             style={{ textAlign: 'center', zIndex: 10, width: '100%', maxWidth: '1000px' }}
           >
-            {/* Animated Fetus Illustration with Callout */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5, y: 50 }}
-              animate={{ 
-                opacity: 1, 
-                scale: [1, 1.03, 1],
-                y: 0 
-              }}
-              transition={{ 
-                opacity: { duration: 1.5 },
-                scale: { repeat: Infinity, duration: 2, ease: "easeInOut" }
-              }}
-              style={{ marginBottom: '2.5rem', marginTop: '5rem', position: 'relative', display: 'inline-block' }}
-            >
-              {/* Speech Bubble Callout */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentMessage}
-                  initial={{ opacity: 0, y: 10, scale: 0.8 }}
-                  animate={{ opacity: 1, y: -15, scale: 1 }}
-                  exit={{ opacity: 0, y: -25, scale: 0.8 }}
-                  style={{
-                    position: 'absolute',
-                    top: '-70px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    background: 'white',
-                    padding: '0.7rem 1.2rem',
-                    borderRadius: '18px',
-                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-                    border: '2px solid rgba(212,175,55,0.2)',
-                    zIndex: 20,
-                    width: 'max-content',
-                    maxWidth: '280px',
-                    fontFamily: "'Quicksand', sans-serif",
-                    fontWeight: 700,
-                    fontSize: 'clamp(0.75rem, 3.5vw, 0.9rem)',
-                    color: '#d4af37'
-                  }}
-                >
-                  {currentMessage}
-                  {/* Bubble Pointer */}
-                  <div style={{
-                    position: 'absolute',
-                    bottom: '-10px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '0',
-                    height: '0',
-                    borderLeft: '10px solid transparent',
-                    borderRight: '10px solid transparent',
-                    borderTop: '10px solid white'
-                  }} />
-                </motion.div>
-              </AnimatePresence>
+            {/* Callout and Baby Wrapper */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2.5rem', marginTop: '1rem' }}>
+              
+              {/* Speech Bubble Callout Wrapper (Reserves space to prevent layout jumps) */}
+              <div style={{ minHeight: '90px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', marginBottom: '15px' }}>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentMessage}
+                    initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.8 }}
+                    style={{
+                      position: 'relative',
+                      background: 'white',
+                      padding: '0.8rem 1.2rem',
+                      borderRadius: '18px',
+                      boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+                      border: '2px solid rgba(212,175,55,0.2)',
+                      zIndex: 20,
+                      width: 'max-content',
+                      maxWidth: '280px',
+                      fontFamily: "'Quicksand', sans-serif",
+                      fontWeight: 700,
+                      fontSize: 'clamp(0.75rem, 3.5vw, 0.9rem)',
+                      color: '#d4af37'
+                    }}
+                  >
+                    {currentMessage}
+                    {/* Bubble Pointer */}
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '-10px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: '0',
+                      height: '0',
+                      borderLeft: '10px solid transparent',
+                      borderRight: '10px solid transparent',
+                      borderTop: '10px solid white'
+                    }} />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
 
-              <div style={{
-                position: 'absolute',
-                inset: '-15px',
-                background: 'radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%)',
-                borderRadius: '50%',
-                zIndex: -1
-              }} />
-              <img 
-                src="./fetus.png" 
-                alt="2-Month Fetus Illustration" 
-                style={{ 
-                  width: 'clamp(180px, 40vw, 240px)', 
-                  height: 'clamp(180px, 40vw, 240px)', 
-                  borderRadius: '50%', 
-                  objectFit: 'cover',
-                  border: '6px solid white',
-                  boxShadow: '0 15px 40px rgba(0,0,0,0.1)'
-                }} 
-              />
-            </motion.div>
+              {/* Animated Fetus Illustration */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, y: 50 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: [1, 1.03, 1],
+                  y: 0 
+                }}
+                transition={{ 
+                  opacity: { duration: 1.5 },
+                  scale: { repeat: Infinity, duration: 2, ease: "easeInOut" }
+                }}
+                style={{ position: 'relative', display: 'inline-block' }}
+              >
+                <div style={{
+                  position: 'absolute',
+                  inset: '-15px',
+                  background: 'radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%)',
+                  borderRadius: '50%',
+                  zIndex: -1
+                }} />
+                <img 
+                  src="./fetus.png" 
+                  alt="2-Month Fetus Illustration" 
+                  style={{ 
+                    width: 'clamp(180px, 40vw, 240px)', 
+                    height: 'clamp(180px, 40vw, 240px)', 
+                    borderRadius: '50%', 
+                    objectFit: 'cover',
+                    border: '6px solid white',
+                    boxShadow: '0 15px 40px rgba(0,0,0,0.1)'
+                  }} 
+                />
+              </motion.div>
+            </div>
 
             <motion.div variants={itemVariants} style={{ marginBottom: '2.5rem' }}>
               <h2 style={{ 
