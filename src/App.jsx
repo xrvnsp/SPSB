@@ -140,7 +140,7 @@ function App() {
                  color: '#4a3f35', 
                  marginTop: '0.5rem' 
                }}>
-                  Late Shri Singaravelu & Late Mahalingam
+                  Late Shri Singaravelu <br /> & Late Mahalingam
                </h3>
             </div>
 
