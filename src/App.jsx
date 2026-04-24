@@ -72,12 +72,12 @@ function App() {
       width: '100%', 
       color: '#4a3f35',
       display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',
       overflowX: 'hidden',
       position: 'relative',
       fontFamily: "'Quicksand', sans-serif",
-      padding: '2rem 1rem'
+      padding: '5rem 1rem 2rem 1rem'
     }}>
       {/* Premium Contrast Particles */}
       <Particles count={45} color="#4a3f35" />
@@ -97,7 +97,8 @@ function App() {
               maxWidth: '600px',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center'
+              alignItems: 'center',
+              margin: 'auto 0'
             }}
           >
             <motion.div
@@ -177,7 +178,7 @@ function App() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            style={{ textAlign: 'center', zIndex: 10, width: '100%', maxWidth: '1000px' }}
+            style={{ textAlign: 'center', zIndex: 10, width: '100%', maxWidth: '1000px', margin: 'auto 0' }}
           >
             {/* Animated Fetus Illustration with Callout */}
             <motion.div
