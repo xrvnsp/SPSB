@@ -191,7 +191,7 @@ function App() {
                 opacity: { duration: 1.5 },
                 scale: { repeat: Infinity, duration: 2, ease: "easeInOut" }
               }}
-              style={{ marginBottom: '2.5rem', position: 'relative', display: 'inline-block' }}
+              style={{ marginBottom: '2.5rem', marginTop: '5rem', position: 'relative', display: 'inline-block' }}
             >
               {/* Speech Bubble Callout */}
               <AnimatePresence mode="wait">
