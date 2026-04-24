@@ -243,7 +243,7 @@ function App() {
                 zIndex: -1
               }} />
               <img 
-                src="/fetus.png" 
+                src="./fetus.png" 
                 alt="2-Month Fetus Illustration" 
                 style={{ 
                   width: 'clamp(180px, 40vw, 240px)', 
