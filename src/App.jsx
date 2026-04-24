@@ -77,11 +77,12 @@ function App() {
       overflowX: 'hidden',
       position: 'relative',
       fontFamily: "'Quicksand', sans-serif",
-      padding: '5rem 1rem 2rem 1rem'
+      padding: '2rem 1rem'
     }}>
       {/* Premium Contrast Particles */}
       <Particles count={45} color="#4a3f35" />
       
+      <div style={{ flex: 1 }}></div>
       <AnimatePresence mode="wait">
         {!started ? (
           <motion.div
@@ -97,8 +98,7 @@ function App() {
               maxWidth: '600px',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              margin: 'auto 0'
+              alignItems: 'center'
             }}
           >
             <motion.div
@@ -178,7 +178,7 @@ function App() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            style={{ textAlign: 'center', zIndex: 10, width: '100%', maxWidth: '1000px', margin: 'auto 0' }}
+            style={{ textAlign: 'center', zIndex: 10, width: '100%', maxWidth: '1000px' }}
           >
             {/* Animated Fetus Illustration with Callout */}
             <motion.div
@@ -366,6 +366,7 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <div style={{ flex: 1 }}></div>
 
       {/* Responsive Decorative Orbs */}
       <div style={{
