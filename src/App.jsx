@@ -11,7 +11,9 @@ const RANDOM_MESSAGES = [
   "Enna romba miss panringala?",
   "Ungaloda anbu kaga wait panren",
   "I'm excited to meet you both!",
-  "Can't wait to see your faces!"
+  "Can't wait to see your faces!",
+  "Valicha konjam poruthuka ma",
+  "vomit vandha konjam adjust panikonga ma"
 ];
 
 function App() {
