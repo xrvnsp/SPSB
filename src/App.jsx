@@ -171,7 +171,7 @@ function App() {
 
             <div style={{ marginTop: '4rem', opacity: 0.6 }}>
                <p style={{ letterSpacing: '0.15em', fontSize: '0.7rem', color: 'rgba(74,63,53,0.4)', fontWeight: 700 }}>CELEBRATED BY</p>
-               <p style={{ fontSize: 'clamp(1rem, 5vw, 1.3rem)', fontWeight: 700, marginTop: '0.5rem', fontFamily: "'Comfortaa', cursive" }}>Santhosh & Sivabarathi</p>
+               <p style={{ fontSize: 'clamp(1rem, 5vw, 1.3rem)', fontWeight: 700, marginTop: '0.5rem', fontFamily: "'Comfortaa', cursive" }}>Santhosh & Siva bharathy</p>
             </div>
           </motion.div>
         ) : (
@@ -332,7 +332,7 @@ function App() {
             >
               <div style={{ textAlign: 'center' }}>
                  <p style={{ color: '#d4af37', letterSpacing: '0.2em', fontSize: '0.7rem', marginBottom: '0.5rem', fontWeight: 700 }}>WITH LOVE & BLESSINGS</p>
-                 <p style={{ fontSize: 'clamp(1.1rem, 5vw, 1.4rem)', fontWeight: 700, color: '#4a3f35', fontFamily: "'Comfortaa', cursive" }}>Santhosh & Sivabarathi</p>
+                 <p style={{ fontSize: 'clamp(1.1rem, 5vw, 1.4rem)', fontWeight: 700, color: '#4a3f35', fontFamily: "'Comfortaa', cursive" }}>Santhosh & Siva bharathy</p>
               </div>
 
               <div style={{ 
